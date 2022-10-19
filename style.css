@@ -13,9 +13,10 @@
 #cities{
     border: 5px solid red;
 }
-#weather_display{
+#weather_display {
     border: 5px solid red;
+
 }
-#five_day_forecast{
-    border: 5px solid red;
+#five_day_forecast{    
+   border: 5px solid red;
 }
