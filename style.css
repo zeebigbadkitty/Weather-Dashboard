@@ -22,7 +22,8 @@ body {
     background: rgb(239,224,221);
     background: linear-gradient(3deg, rgba(239,224,221,1) 0%, rgba(252,249,244,1) 59%, rgba(210,187,173,1) 100%);
     text-align:center;
-    height:50px;
+    padding: 20px;
+    height:100px;
 }
 #header2{
     border: 5px solid white;
@@ -32,19 +33,22 @@ body {
 #city_search{
     border: 5px solid white;
     background-color: var(--tan);
+    padding: 25px;
 }
 #blank{
     border: 5px solid white;
 }
 #cities{
     border: 5px solid white;
-
+    padding: 25px;
 }
 #weather_display {
     border: 5px solid white;
     height: 250px;
+    padding: 25px;
 }
 #five_day_forecast{   
-    border: 5px solid white; 
+   border: 5px solid white; 
    height: 250px;
+   padding: 25px;
 }
