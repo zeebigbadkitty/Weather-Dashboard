@@ -26,17 +26,16 @@ body {
     height:100px;
 }
 #header2{
-    border: 5px solid white;
     background-color: var(--tan);
     padding: 25px;
 }
 #city_search{
-    border: 5px solid white;
+
     background-color: var(--tan);
     padding: 25px;
 }
 #blank{
-    border: 5px solid white;
+
 }
 #cities{
     border: 5px solid white;
@@ -48,7 +47,7 @@ body {
     padding: 25px;
 }
 #five_day_forecast{   
-   border: 5px solid white; 
+
    height: 250px;
    padding: 25px;
 }
