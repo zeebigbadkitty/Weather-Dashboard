@@ -5,6 +5,7 @@
     --lightpink:#efe0dd;
     --lightred:#eeccc3;
     --lightgreen:#dbded5;
+    --purple: #715c87;
 }
 * {
     margin:0;
@@ -14,39 +15,46 @@
 body {
     border: 5px solid white;
     height:1000px;
-    background-color: var(--tan);
+    background: #715C87;
+    background: -moz-linear-gradient(top, #715C87 0%, #2590D7 100%, #71B4C5 100%);
+    background: -webkit-linear-gradient(top, #715C87 0%, #2590D7 100%, #71B4C5 100%);
+    background: linear-gradient(to bottom, #715C87 0%, #2590D7 100%, #71B4C5 100%);
     border:#c2c5bc
 }
 #header{
-    border: 5px solid white;
-    background: rgb(239,224,221);
-    background: linear-gradient(3deg, rgba(239,224,221,1) 0%, rgba(252,249,244,1) 59%, rgba(210,187,173,1) 100%);
+    border: 1px solid white;
+    background: #fff url(/assets/weather.jpg) center top/cover repeat;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #dac7ed;
+    font-weight: 700;
+    font-variant: small-caps;
+    text-transform: none;
     text-align:center;
+    text-shadow: 2px 2px 2px #FFFFFF;
     padding: 20px;
     height:100px;
 }
 #header2{
-    background-color: var(--tan);
     padding: 25px;
+    border-right: 1px solid white;
 }
 #city_search{
-
-    background-color: var(--tan);
     padding: 25px;
-}
-#blank{
-
+    border-right: 1px solid white;
 }
 #cities{
-    border: 5px solid white;
     padding: 25px;
+    padding: 25px;
+    border-right: 1px solid white;
 }
 #weather_display {
-    border: 5px solid white;
     height: 250px;
     padding: 25px;
 }
-#five_day_forecast{   
+#current_forecast{   
 
    height: 250px;
    padding: 25px;

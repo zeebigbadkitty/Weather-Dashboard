@@ -15,3 +15,5 @@ function getApi() {
     })
 }
 
+var currentForecast = document.getElementById('current_forecast')
+currentForecast.insertAdjacentText("afterend", "")
