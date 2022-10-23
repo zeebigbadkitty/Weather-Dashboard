@@ -1,0 +1,107 @@
+:root {
+    --tan:#fcf9f4;
+    --brown:#d2bbad;
+    --green:#c2c5bc;
+    --lightpink:#efe0dd;
+    --lightred:#eeccc3;
+    --lightgreen:#dbded5;
+    --purple: #715c87;
+    --lightpurple: #dac7ed;
+}
+* {
+    margin:0;
+    padding:0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+}
+body {
+    border: 5px solid white;
+    height:1000px;
+    background: #715C87;
+    background: -moz-linear-gradient(top, #715C87 0%, #2590D7 100%, #71B4C5 100%);
+    background: -webkit-linear-gradient(top, #715C87 0%, #2590D7 100%, #71B4C5 100%);
+    background: linear-gradient(to bottom, #715C87 0%, #2590D7 100%, #71B4C5 100%);
+    border:#c2c5bc
+}
+#header{
+    border: 1px solid white;
+    background: #fff url(/assets/weather.jpg) center top/cover repeat;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: var(--lightpurple);
+    font-weight: 700;
+    font-variant: small-caps;
+    text-transform: none;
+    text-align:center;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    padding: 20px;
+    height:100px;
+}
+#header2{
+    padding: 25px;
+    border-right: 1px solid white;
+    color: var(--lightpurple);
+}
+#city_search{
+    padding: 25px;
+    border-right: 1px solid white;
+    color: var(--lightpurple);
+    display:grid;
+}
+#cities{
+    padding: 25px;
+    padding: 25px;
+    border-right: 1px solid white;
+    color: var(--lightpurple);
+    display:grid;
+}
+#weather_display {
+    height: 250px;
+    padding: 25px;
+    color: var(--lightpurple);
+}
+#current_forecast{
+   color: var(--lightpurple);
+   height: 250px;
+   padding: 25px;
+}
+.forecast_card{
+    border: 1px solid white; 
+    display: inline-grid;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#search_input{
+    height:50px;
+    width: 175px;
+    border-radius: 50px;
+    padding:20px;
+}
+button{
+    font-size: 14px;
+    color: #ffffff;
+    background: linear-gradient(188deg, #715c87 0%, #dac7ed 100%);
+    border: solid #dac7ed 2px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height:50px;
+    width: 100px;
+}
+button:hover{
+    transition : 1000ms;
+    padding: 10px 24px;
+    transform : translateY(-0px);
+    background: linear-gradient(188deg, #715c87 0%, #dac7ed 100%);
+    color: #48cae4;
+    border: solid 2px #ffffff;
+}
+
+/*/Citations-
+Button - https://www.htmlcssbuttongenerator.com/css-button-generator.html
