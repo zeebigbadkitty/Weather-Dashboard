@@ -4,7 +4,7 @@ var forecastCards = document.querySelectorAll("#forecast_card")
 var searchBtn = document.querySelector("#searchBtn")
 var apiKey = '959168e8af0d2f45700600a0d8d06e7f'
 
-//Search by city.
+//Search by city//CURRENTLY: Not showing all the weather data. :(
 
 
 searchBtn.addEventListener('click', fetchWeather)
@@ -25,41 +25,10 @@ function fetchWeather() {
     //    fetchWeather(city);
     //   }    
 
-//Displaying Current Forecast//CURRENTLY: Not working
-function weatherDisplay(data){
-    var { name } = data;
-    var { icon, description } = data.weather[0];
-    var { temp, humidity } = data.main;
-    var { speed } = data.wind;
-    document.querySelector(".city").innerText = "Weather in " + name;
-    document.querySelector(".icon").src ="https://openweathermap.org/img/wn/" + icon + ".png";
-    document.querySelector(".description").innerText = description;
-    document.querySelector(".temperature").innerText = temp + "°F";
-    document.querySelector(".humidity").innerText =
-      "Humidity: " + humidity + "%";
-    document.querySelector(".wind").innerText =
-      "Wind speed: " + speed + " km/h";
-}
-};
+//Displaying Current Forecast//CURRENTLY: Not working.
 
-//Forecast Cards
 
-//Other Cities//CURRENTLY: Not working
-var recentSearches;
 
-if (localStorage.recentSearches && localStorage.recentSearches != "") {
-  recentSearches = JSON.parse(localStorage.recentSearches);
-} else {
-  recentSearches = [];
-}
+//Forecast Cards//CURRENTLY: Not working.
 
-var makeListItem = function(text, parent) {
-  var listItem = document.createElement("li");
-  listItem.textContent = text;
-  listItem.className = "list-group-item";
-  parent.appendChild(listItem);
-};
-
-recentSearches.forEach(element => {
-  makeListItem(element, ul);
-});
+//Other Cities//CURRENTLY: Not working.
