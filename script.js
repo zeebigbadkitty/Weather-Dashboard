@@ -56,15 +56,22 @@ function fiveDayForecast(lat, lon) {
           }
         }
         console.log(fiveDayForecast);
-        displayWeather(fiveDayForecast)
+        displayWeather(fiveDayForecast);
+
       });
     }
   });
-  
 }
 
-function displayWeather(weatherData){
-document.querySelector('.temperature').textContent=weatherData[0].main.temp
+function displayWeather(weatherData) {
+  document.querySelector(".description").textContent =
+  "Description: "+weatherData[0].weather[0].description;
+  document.querySelector(".temperature").textContent =
+    "The current temperature is " + weatherData[0].main.temp + "°";
+  document.querySelector(".humidity").textContent =
+  "Humidity: "+weatherData[0].main.humidity+'%.';
+  document.querySelector(".wind").textContent =
+  "Wind speed: "+weatherData[0].wind.speed+"mph";
 }
 //Forecast Cards
 
