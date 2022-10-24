@@ -44,7 +44,7 @@ function weatherDisplay(data){
 
 //Forecast Cards
 
-//Other Cities
+//Other Cities//CURRENTLY: Not working
 var recentSearches;
 
 if (localStorage.recentSearches && localStorage.recentSearches != "") {
