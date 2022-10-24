@@ -29,34 +29,43 @@ function fetchWeather() {
         var lon = data[0].lon;
         console.log(lat);
         console.log(lon);
-        var requestUrlFull =
-          "https://api.openweathermap.org/data/2.5/forecast?lat=" +
-          lat +
-          "&lon=" +
-          lon +
-          "&units=imperial&appid=" +
-          apiKey;
 
-        fetch(requestUrlFull).then(function (response) { //Five Day Forecast
-          if (response.ok) {
-            response.json().then(function (data) {
-              console.log(data);
-              var fiveDayForecast= []
-              for(i=0; i<data.list.length; i++){
-                if(data.list[i].dt_txt.includes('00:00:00')){
-                  fiveDayForecast.push(data.list[i]);
-                }
-              } console.log(fiveDayForecast)
-            });
-          }
-        });
+        fiveDayForecast(lat, lon);
       });
     }
   });
 }
 
+function fiveDayForecast(lat, lon) {
+  var requestUrlFull =
+    "https://api.openweathermap.org/data/2.5/forecast?lat=" +
+    lat +
+    "&lon=" +
+    lon +
+    "&units=imperial&appid=" +
+    apiKey;
+  fetch(requestUrlFull).then(function (response) {
+    //Five Day Forecast
+    if (response.ok) {
+      response.json().then(function (data) {
+        console.log(data);
+        var fiveDayForecast = [];
+        for (i = 0; i < data.list.length; i++) {
+          if (data.list[i].dt_txt.includes("00:00:00")) {
+            fiveDayForecast.push(data.list[i]);
+          }
+        }
+        console.log(fiveDayForecast);
+        displayWeather(fiveDayForecast)
+      });
+    }
+  });
+  
+}
 
-
+function displayWeather(weatherData){
+document.querySelector('.temperature').textContent=weatherData[0].main.temp
+}
 //Forecast Cards
 
 //Other Cities
