@@ -4,9 +4,13 @@ var forecastCards = document.querySelectorAll("#forecast_card")
 var searchBtn = document.querySelector("#searchBtn")
 var apiKey = '959168e8af0d2f45700600a0d8d06e7f'
 
-//Search by city//CURRENTLY: Not showing all the weather data. :(
+//Geolocation
+navigator.geolocation.getCurrentPosition((position)=> {
+  console.log(position.coords.latitude,position.coords.longitude);
+})
 
 
+//Search by city
 searchBtn.addEventListener('click', fetchWeather)
 function fetchWeather() {
     var currentForecast = document.querySelector('#current_forecast')
@@ -17,18 +21,22 @@ function fetchWeather() {
         if (response.ok) {
             response.json().then(function (data) {
                 console.log(data)
+
+                var lat = data.coord.lat
+                var lon = data.coord.lon
+                console.log(lat)
+                console.log(lon)
             })
         }
     })
+  }
     // document.querySelector("#search_input").addEventListener("keyup", function (event) {
     //   if (event.key == "Enter") {
     //    fetchWeather(city);
     //   }    
 
-//Displaying Current Forecast//CURRENTLY: Not working.
+//Displaying Current Forecast//CURRENTLY: Not working
 
+//Forecast Cards
 
-
-//Forecast Cards//CURRENTLY: Not working.
-
-//Other Cities//CURRENTLY: Not working.
+//Other Cities
