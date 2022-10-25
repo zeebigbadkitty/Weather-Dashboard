@@ -1,8 +1,9 @@
 var otherCities = document.getElementById("cities");
 var weatherDisplay = document.getElementById("weather_display");
-var forecastCards = document.querySelectorAll("#forecast_card");
 var searchBtn = document.querySelector("#searchBtn");
 var apiKey = "959168e8af0d2f45700600a0d8d06e7f";
+var city;
+
 
 //Geolocation
 navigator.geolocation.getCurrentPosition((position) => {
@@ -13,7 +14,7 @@ navigator.geolocation.getCurrentPosition((position) => {
 searchBtn.addEventListener("click", fetchWeather);
 function fetchWeather() {
   var currentForecast = document.querySelector("#current_forecast");
-  var city = document.getElementById("search_input").value;
+  city = document.getElementById("search_input").value;
   console.log(city);
   var requestUrl =
     "https://api.openweathermap.org/geo/1.0/direct?q=" +
@@ -63,7 +64,16 @@ function fiveDayForecast(lat, lon) {
   });
 }
 
+
+
+
 function displayWeather(weatherData) {
+  // var today = moment().format("MM/DD/YYYY");
+  // console.log(today)
+
+  document.querySelector(".city").textContent =
+  "The current weather in "+city+" is:";
+//document.querySelector(".icon").textContent='<img src="http://openweathermap.org/img/wn/'+data.list[0].weather[0].icon+'@2x.png">';
   document.querySelector(".description").textContent =
   "Description: "+weatherData[0].weather[0].description;
   document.querySelector(".temperature").textContent =
@@ -73,6 +83,24 @@ function displayWeather(weatherData) {
   document.querySelector(".wind").textContent =
   "Wind speed: "+weatherData[0].wind.speed+"mph";
 }
+
 //Forecast Cards
+var forecastCards = document.querySelectorAll("#forecast_card");
+var listEl = document.createElement("ol");
+listEl.append("#weather_display")
+document.body.append
+var forecastCard1 = document.createElement("li");
+forecastCard1.classList.add("forecast_card");
+var forecastCard2 = document.createElement("li");
+forecastCard2.classList.add("forecast_card");
+var forecastCard3 = document.createElement("li");
+forecastCard3.classList.add("forecast_card");
+var forecastCard4 = document.createElement("li");
+forecastCard4.classList.add("forecast_card");
+var forecastCard5 = document.createElement("li");
+forecastCard5.classList.add("forecast_card");
+
+
 
 //Other Cities
+//Search history based on input stored in local storage.
